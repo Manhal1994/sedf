@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sedf/static/css/main.81b6c41d.css",
+    "main.js": "/sedf/static/js/main.2b5b19cf.js",
+    "static/js/592.fc1c8623.chunk.js": "/sedf/static/js/592.fc1c8623.chunk.js",
+    "static/media/astronaut.png": "/sedf/static/media/astronaut.e4c546c729b50fa2830f.png",
+    "static/media/uni.jpeg": "/sedf/static/media/uni.44d2cbc8d5b730d20285.jpeg",
+    "static/media/night.jpg": "/sedf/static/media/night.e0b7cf9253ccb22b5148.jpg",
+    "static/media/bg.jpg": "/sedf/static/media/bg.5348934b86346926dc3e.jpg",
+    "static/media/revicons.eot": "/sedf/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/sedf/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/sedf/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/sedf/index.html",
+    "main.81b6c41d.css.map": "/sedf/static/css/main.81b6c41d.css.map",
+    "main.2b5b19cf.js.map": "/sedf/static/js/main.2b5b19cf.js.map",
+    "592.fc1c8623.chunk.js.map": "/sedf/static/js/592.fc1c8623.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81b6c41d.css",
+    "static/js/main.2b5b19cf.js"
+  ]
+}
