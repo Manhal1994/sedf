@@ -1,0 +1,876 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: content-box !important;
+}
+:root {
+  --change: 280px;
+}
+/* Header */
+.header-container {
+  box-sizing: border-box !important;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  margin: 0px auto;
+  padding: 10px 40px;
+}
+.navigation-section-md {
+  display: none;
+}
+.collapsed-header-md {
+  display: none;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.navigation-section {
+  display: flex;
+  align-items: center;
+}
+.sections a {
+  margin-left: 40px;
+  color: grey;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sections a:hover {
+  color: white;
+}
+.active {
+  color: white !important;
+}
+.social {
+  margin: 0px 20px;
+  display: flex;
+}
+.social-item {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 0.5px solid white;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 35px;
+}
+
+.social-item a {
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+div.social-item::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  background-color: white;
+  color: white;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transition: 0.3s all;
+}
+div.social-item:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.social .social-item:hover .fa {
+  color: black;
+}
+
+.connect {
+  height: 55px;
+  width: 70px;
+  color: white;
+  position: relative;
+  line-height: 55px;
+  padding: 0 30px;
+  border: 1px solid white;
+  text-align: center;
+  cursor: pointer;
+}
+.connect::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  background-color: white;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.connect:hover::before {
+  width: 100%;
+  color: black;
+  transition: 0.3s all;
+}
+.connect:hover {
+  color: black;
+}
+.connect span {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transition: 0.3s all;
+}
+
+/* main */
+.main {
+  width: 100%;
+  position: relative;
+  background-image: url("../src/uni.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #44000000;
+}
+.intro {
+  flex: 1;
+  max-height: 90%;
+  min-height: 90%;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.intro p {
+  color: rgba(255, 255, 255, 0.884);
+}
+.intro .lets {
+  margin-top: 20px;
+  color: white;
+  text-align: start;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.welcome {
+  margin-top: 100px;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  color: white;
+  background: linear-gradient(90deg, rgb(61, 6, 68), rgb(148, 18, 94));
+  border: 0.4px solid white;
+}
+.main .image-section {
+  position: absolute;
+  right: 25%;
+  top: 5%;
+}
+.main img {
+  display: block;
+  transform: translate(50%, 50px);
+  max-width: 400px;
+  max-height: 400px;
+  animation-name: space;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  background-color: transparent;
+}
+
+@keyframes space {
+  from {
+    transform: translate(50%, 50px);
+  }
+  to {
+    transform: translate(50%, 60px);
+  }
+}
+
+.typewriter {
+  margin: 20px 0px;
+  font-size: 48px;
+  letter-spacing: 2px;
+  text-align: start;
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 60%;
+  color: white;
+}
+.typewriter:after {
+  content: "";
+  animation: write 30s linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes write {
+  1% {
+    content: "F";
+  }
+  2% {
+    content: "Fu";
+  }
+  3% {
+    content: "Ful";
+  }
+  4% {
+    content: "Full";
+  }
+  5% {
+    content: "Full ";
+  }
+  6% {
+    content: "Full S";
+  }
+  7% {
+    content: "Full St";
+  }
+  8% {
+    content: "Full Sta";
+  }
+
+  14% {
+    content: "Full Stac";
+  }
+  14.5% {
+    content: "Full Stack";
+  }
+  15% {
+    content: "Full Stack ";
+  }
+  15.5% {
+    content: "Full Stack D";
+  }
+  16% {
+    content: "Full Stack De";
+  }
+  16.5% {
+    content: "Full Stack Dev";
+  }
+  17% {
+    content: "Full Stack Deve";
+  }
+  17.5% {
+    content: "Full Stack Devel";
+  }
+  18% {
+    content: "Full Stack Develo";
+  }
+
+  20% {
+    content: "Full Stack Develop";
+  }
+  21% {
+    content: "Full Stack Develope";
+  }
+  22.5% {
+    content: "Full Stack Developer";
+  }
+  22% {
+    content: "Full Stack Develope";
+  }
+  23% {
+    content: "Full Stack Develop";
+  }
+  24% {
+    content: "Full Stack Develo";
+  }
+  25% {
+    content: "Full Stack Devel";
+  }
+  26% {
+    content: "Full Stack Deve";
+  }
+  27% {
+    content: "Full Stack Dev";
+  }
+  22% {
+    content: "Full Stack De";
+  }
+  28% {
+    content: "Full Stack D";
+  }
+  29% {
+    content: "Full Stack ";
+  }
+  30% {
+    content: "Full stack";
+  }
+  31% {
+    content: "Full stac";
+  }
+  32% {
+    content: "Full sta";
+  }
+  33% {
+    content: "Full st";
+  }
+  34% {
+    content: "Full s";
+  }
+  35% {
+    content: "Full ";
+  }
+  36% {
+    content: "Full";
+  }
+  37% {
+    content: "Ful";
+  }
+  38% {
+    content: "Fu";
+  }
+  39% {
+    content: "F";
+  }
+  40% {
+    content: "";
+  }
+
+  41% {
+    content: "Fr";
+  }
+  42% {
+    content: "Fro";
+  }
+
+  43% {
+    content: "Fron";
+  }
+  44% {
+    content: "Front";
+  }
+  45% {
+    content: "Front ";
+  }
+  46% {
+    content: "Front D";
+  }
+  47% {
+    content: "Front De";
+  }
+  48% {
+    content: "Front Dev";
+  }
+  49% {
+    content: "Front Deve";
+  }
+  50% {
+    content: "Front Devel";
+  }
+  51% {
+    content: "Front Develo";
+  }
+  52% {
+    content: "Front Develop";
+  }
+
+  53% {
+    content: "Front Develope";
+  }
+  54% {
+    content: "Front Developer";
+  }
+  55% {
+    content: "Front";
+  }
+  56% {
+    content: "";
+  }
+  57% {
+    content: "B";
+  }
+  58% {
+    content: "Ba";
+  }
+  59% {
+    content: "Bac";
+  }
+  60% {
+    content: "Back";
+  }
+  61% {
+    content: "Back ";
+  }
+  62% {
+    content: "Back E";
+  }
+  63% {
+    content: "Back En";
+  }
+  64% {
+    content: "Back End";
+  }
+  65% {
+    content: "Back End D";
+  }
+  66% {
+    content: "Back End De";
+  }
+  67% {
+    content: "Back End Dev";
+  }
+  68% {
+    content: "Back End Deve";
+  }
+  69% {
+    content: "Back End Devel";
+  }
+  70% {
+    content: "Back End Develo";
+  }
+  71% {
+    content: "Back End Develop";
+  }
+  72% {
+    content: "Back End Develope";
+  }
+  73% {
+    content: "Back End Developer";
+  }
+  74% {
+    content: "Back End";
+  }
+  75% {
+    content: "Back";
+  }
+  76% {
+    content: "";
+  }
+  100% {
+    content: "";
+  }
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 300px;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/*------------ Skills---------------*/
+
+.skills {
+  height: 100vh;
+  position: relative;
+  background-image: url("./skills_bg.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+.skills-container {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  height: 80%;
+  width: 80%;
+  padding-top: 50px;
+  margin: 0px auto;
+  text-align: center;
+  background-color: black;
+  border-radius: 10%;
+  color: white;
+}
+.skills-title {
+  font-size: 2.5rem;
+}
+.desc {
+  margin-top: 20px;
+  letter-spacing: 1.3px;
+}
+
+.skillsCarouse {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+}
+.skill-item h6 {
+  margin-top: 10px;
+}
+
+/* ---------------My Projects--------------------*/
+.myprojects {
+  min-height: 100vh;
+  background-color: black;
+}
+.myprojects .title {
+  color: white;
+  font-weight: bold;
+  padding-top: 30px;
+  text-align: center;
+}
+.myprojects .desc {
+  text-align: center;
+  color: white;
+}
+.myprojects .sections-header {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.NavLink {
+  display: inline-block;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.project-item {
+  width: 350px;
+  height: 175px;
+  margin: 5px 10px;
+  position: relative;
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+.project-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 15px;
+  transition: all 0.3s ease-in;
+  height: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(221, 18, 153, 0.5);
+}
+.project-item:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  color: white;
+  text-align: center;
+  transform: translate(50%, -50%);
+  transition: all 0.3s;
+}
+.project-item:hover .info {
+  display: block;
+}
+.info p {
+  text-align: center;
+  font-size: 12px;
+}
+.info h4 {
+  font-size: 20px;
+}
+.contact {
+  height: 100vh;
+  display: flex;
+}
+.contact-form {
+  flex: 1;
+}
+.empty-div {
+  flex: 1;
+}
+.contact-form h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.contact input {
+  height: 60px;
+  width: 264px;
+  border: 1px solid white;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  background-color: #9c1be7;
+  color: white;
+  text-decoration: #9198e5;
+  margin-right: 10px;
+  padding-left: 20px;
+}
+.contact-form input:focus {
+  background-color: white;
+  color: black;
+}
+textarea.message:focus {
+  background-color: white;
+  color: black;
+}
+
+.message {
+  width: 568px;
+  height: 240px;
+  padding-left: 20px;
+  padding-top: 20px;
+  background-color: #9c1be7;
+  color: white;
+  border-radius: 18px;
+}
+
+.contact input::placeholder {
+  color: white;
+}
+.message::placeholder {
+  color: white;
+}
+
+.contact {
+  background-image: url("../src/night.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.email {
+  height: 225px;
+  width: 80%;
+  background-color: white;
+  position: absolute;
+  border-radius: 20px;
+  top: 0%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.email-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0px 10%;
+}
+.email .text {
+  flex: 1;
+}
+.email-submit {
+  flex: 1;
+  display: flex;
+  padding: 5px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.email-submit input[type="email"] {
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+.email-submit input[type="submit"] {
+  display: inline-block;
+
+  height: 50px;
+  width: 120px;
+  border: none;
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgb(224, 5, 126), rgb(107, 106, 192));
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: end;
+  height: 50vh;
+  overflow: visible;
+  background: linear-gradient(90deg, black, rgb(61, 6, 68));
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+}
+.logo {
+  font-size: 48px;
+}
+/*---------------------------Responsice Style----------------------------*/
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    position: relative;
+    display: flex;
+    min-height: 170vh;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .main .image-section {
+    height: 70vh;
+    position: relative;
+  }
+  .intro {
+    height: 100vh;
+    left: 0;
+    position: relative;
+  }
+  .main img {
+    margin-left: 20px;
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .navigation-section-md {
+    display: block;
+  }
+  .navigation-section {
+    display: none;
+  }
+  .collapsed-header-md {
+    display: block;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+  }
+  .sections {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 1rem;
+  }
+  .social-md {
+    display: flex;
+    align-items: center;
+  }
+  .fa-bars {
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .main {
+    min-height: 100vh;
+  }
+  .bg {
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro {
+    max-width: 100%;
+    min-height: auto;
+  }
+  .image-section {
+    min-height: auto;
+  }
+  .typewriter {
+    max-width: 100%;
+  }
+  .image-section {
+    max-height: auto;
+  }
+  .image-section img {
+    transform: translate(20px, 1px);
+  }
+  .projects {
+    grid-template-columns: auto auto;
+  }
+  .project-item {
+    width: 175px;
+    height: 87px;
+  }
+  .contact-form {
+    margin-left: 20px;
+  }
+
+  .contact input {
+    height: 50px;
+    width: 200px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    background-color: #9c1be7;
+    color: white;
+    text-decoration: #9198e5;
+    margin-right: 10px;
+    padding-left: 20px;
+  }
+  .empty-div {
+    display: none;
+  }
+
+  .message {
+    width: 284px;
+    height: 160px;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: #9c1be7;
+    color: white;
+    border-radius: 18px;
+  }
+  .email {
+    height: 124px;
+  }
+  .email-container {
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    flex: none;
+    height: 80%;
+    font-size: 1rem;
+  }
+  .email-submit {
+    align-items: center;
+    max-height: 30px;
+    padding: 5px 10px;
+  }
+  .email-submit input[type="submit"] {
+    width: 60px;
+    height: 25px;
+  }
+  .email .text {
+    flex: none;
+  }
+  .email-submit input[type="email"] {
+    border: none;
+    display: inline-block;
+    font-size: 0.5rem;
+  }
+}
