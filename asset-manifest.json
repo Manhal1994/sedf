@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sedf/static/css/main.81b6c41d.css",
-    "main.js": "/sedf/static/js/main.2b5b19cf.js",
+    "main.js": "/sedf/static/js/main.cf120c0d.js",
     "static/js/592.fc1c8623.chunk.js": "/sedf/static/js/592.fc1c8623.chunk.js",
     "static/media/astronaut.png": "/sedf/static/media/astronaut.e4c546c729b50fa2830f.png",
     "static/media/uni.jpeg": "/sedf/static/media/uni.44d2cbc8d5b730d20285.jpeg",
@@ -12,11 +12,11 @@
     "static/media/revicons.woff": "/sedf/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/sedf/index.html",
     "main.81b6c41d.css.map": "/sedf/static/css/main.81b6c41d.css.map",
-    "main.2b5b19cf.js.map": "/sedf/static/js/main.2b5b19cf.js.map",
+    "main.cf120c0d.js.map": "/sedf/static/js/main.cf120c0d.js.map",
     "592.fc1c8623.chunk.js.map": "/sedf/static/js/592.fc1c8623.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.81b6c41d.css",
-    "static/js/main.2b5b19cf.js"
+    "static/js/main.cf120c0d.js"
   ]
 }
